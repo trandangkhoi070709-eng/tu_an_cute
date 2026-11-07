@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đừng Để Mạng Xã Hội Làm Đau Một Người</title>
+
+<style>
+:root {
+    --pink: #F6DCE8;
+    --rose: #D98EAF;
+    --blue: #D9EDFA;
+    --sky: #83B9DE;
+    --cream: #FFF9F7;
+    --plum: #754B5C;
+    --dark: #39323A;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--dark);
+    font-family: Arial, sans-serif;
+    line-height: 1.75;
+}
+
+/* HEADER */
+
+header {
+    background: var(--pink);
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: var(--plum);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+nav a {
+    color: var(--plum);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #B84F7D;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 480px;
+    padding: 65px 8%;
+    background: linear-gradient(120deg, #F6DCE8, #D9EDFA);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    max-width: 580px;
+}
+
+.tag {
+    display: inline-block;
+    background: white;
+    color: var(--plum);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    color: var(--plum);
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.2;
+    margin: 22px 0;
+}
+
+.hero p {
+    font-size: 17px;
+    max-width: 500px;
+}
+
+.hero-image {
+    width: 42%;
+    min-width: 260px;
+    max-width: 470px;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+    box-shadow: 12px 12px 0 var(--rose);
+}
+
+/* COMMON */
+
+section {
+    padding: 75px 9%;
+}
+
+.section-label {
+    color: #B65E84;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    color: var(--plum);
+    font-size: 32px;
+    line-height: 1.3;
+    margin: 10px 0 20px;
+}
+
+.section-intro {
+    max-width: 720px;
+    margin-bottom: 30px;
+}
+
+/* INTRO */
+
+.intro {
+    background: var(--cream);
+    text-align: center;
+}
+
+.intro p {
+    max-width: 850px;
+    margin: auto;
+}
+
+.quote {
+    margin: 35px auto 0;
+    max-width: 750px;
+    padding: 22px 30px;
+    background: var(--pink);
+    border-left: 5px solid var(--rose);
+    border-radius: 12px;
+    color: var(--plum);
+    font-size: 19px;
+    font-weight: bold;
+}
+
+/* CONTENT ROW */
+
+.content-row {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.content-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.content-text {
+    flex: 1;
+}
+
+.content-image {
+    flex: 1;
+    min-width: 0;
+}
+
+.content-image img {
+    width: 100%;
+    max-height: 340px;
+    object-fit: cover;
+    border-radius: 22px;
+}
+
+.blue-section {
+    background: var(--blue);
+}
+
+.pink-section {
+    background: var(--pink);
+}
+
+/* CARDS */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px #754B5C12;
+}
+
+.card .number {
+    color: var(--rose);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.card h3 {
+    color: var(--plum);
+    margin: 8px 0;
+}
+
+/* VIDEO */
+
+.video-section {
+    background: #F2F8FC;
+    text-align: center;
+}
+
+.video-box {
+    max-width: 850px;
+    margin: 30px auto 0;
+    background: white;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px #4C78951A;
+}
+
+video {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    background: #D9EDFA;
+}
+
+/* SOLUTIONS */
+
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.solution {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    border-top: 5px solid var(--rose);
+}
+
+.solution:nth-child(even) {
+    border-top-color: var(--sky);
+}
+
+.solution h3 {
+    color: var(--plum);
+}
+
+/* MESSAGE */
+
+.message {
+    background: linear-gradient(120deg, var(--pink), var(--blue));
+    text-align: center;
+}
+
+.message-box {
+    max-width: 800px;
+    margin: auto;
+}
+
+.message h2 {
+    color: var(--plum);
+    font-size: 35px;
+}
+
+.message p {
+    font-size: 18px;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--plum);
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+    font-size: 13px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 760px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 7%;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .content-row,
+    .content-row.reverse {
+        flex-direction: column;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .solution-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 55px 7%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">PHÒNG CHỐNG BẠO LỰC HỌC ĐƯỜNG TRÊN KHÔNG GIAN MẠNG</div>
+
+    <nav>
+        <a href="#gioithieu">Giới thiệu</a>
+        <a href="#thuctrang">Thực trạng</a>
+        <a href="#nguyennhan">Nguyên nhân</a>
+        <a href="#hauqua">Hậu quả</a>
+        <a href="#giaiphap">Giải pháp</a>
+    </nav>
+</header>
+
+
+<!-- HERO: ẢNH BÌA -->
+
+<div class="hero">
+    <div class="hero-text">
+        <span class="tag">GÓC NHÌN HỌC ĐƯỜNG</span>
+
+        <h1>ĐỪNG ĐỂ MẠNG XÃ HỘI LÀM ĐAU MỘT NGƯỜI</h1>
+
+        <p>
+            Bạo lực học đường trên không gian mạng –
+            một vấn đề không thể xem nhẹ trong thời đại số.
+        </p>
+    </div>
+
+    <div class="hero-image">
+        <img src="images/anh_chinh.jpg"
+             alt="Ảnh minh họa chủ đề bạo lực mạng">
+    </div>
+</div>
+
+
+<!-- GIỚI THIỆU -->
+
+<section class="intro" id="gioithieu">
+    <div class="section-label">01 / INTRODUCTION</div>
+
+    <h2 class="section-title">Khi màn hình trở thành nơi tổn thương</h2>
+
+    <p>
+        Internet và mạng xã hội đã trở thành một phần quen thuộc
+        trong cuộc sống của học sinh. Chúng giúp chúng ta kết nối,
+        học tập và chia sẻ những điều thú vị. Tuy nhiên, bên cạnh
+        những lợi ích ấy, không gian mạng cũng đang trở thành nơi
+        xuất hiện nhiều hành vi bắt nạt, xúc phạm và công kích người khác.
+    </p>
+
+    <div class="quote">
+        Đằng sau mỗi tài khoản là một con người thật,
+        với cảm xúc và lòng tự trọng cần được tôn trọng.
+    </div>
+</section>
+
+
+<!-- THỰC TRẠNG -->
+
+<section class="pink-section" id="thuctrang">
+    <div class="content-row">
+        <div class="content-text">
+            <div class="section-label">02 / THE SITUATION</div>
+
+            <h2 class="section-title">Bạo lực mạng đang diễn ra như thế nào?</h2>
+
+            <p>
+                Bạo lực học đường không chỉ xuất hiện trong lớp học
+                hay sân trường. Trên mạng xã hội, những lời chế giễu,
+                bình luận ác ý, tin đồn sai lệch và hành vi chia sẻ
+                hình ảnh riêng tư có thể lan truyền rất nhanh.
+            </p>
+
+            <p>
+                Đáng lo ngại hơn, đôi khi người chứng kiến lại chọn
+                im lặng, thậm chí tham gia bình luận hoặc chia sẻ,
+                khiến người bị bắt nạt càng khó tìm được sự giúp đỡ.
+            </p>
+        </div>
+
+        <div class="content-image">
+            <img src="images/bao_luc_mang.jfif"
+                 alt="Minh họa tình trạng bắt nạt trên mạng">
+        </div>
+    </div>
+</section>
+
+
+<!-- CÁC HÌNH THỨC -->
+
+<section>
+    <div class="section-label">03 / COMMON FORMS</div>
+
+    <h2 class="section-title">Những hình thức thường gặp</h2>
+
+    <p class="section-intro">
+        Bạo lực trên không gian mạng có thể xuất hiện dưới nhiều
+        hình thức khác nhau, đôi khi được ngụy trang dưới danh nghĩa
+        vui đùa hoặc trêu chọc.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <div class="number">01</div>
+            <h3>Công kích bằng lời nói</h3>
+            <p>
+                Bình luận xúc phạm, chế giễu ngoại hình,
+                hoàn cảnh hoặc khả năng của người khác.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="number">02</div>
+            <h3>Lan truyền thông tin</h3>
+            <p>
+                Tung tin đồn sai lệch, bịa đặt câu chuyện
+                hoặc cố tình làm tổn hại danh dự người khác.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="number">03</div>
+            <h3>Xâm phạm quyền riêng tư</h3>
+            <p>
+                Tự ý đăng tải hình ảnh, video hoặc thông tin
+                cá nhân khi chưa được sự đồng ý.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- NGUYÊN NHÂN -->
+
+<section class="blue-section" id="nguyennhan">
+    <div class="content-row reverse">
+
+        <div class="content-text">
+            <div class="section-label">04 / CAUSES</div>
+
+            <h2 class="section-title">Vì sao bạo lực mạng xuất hiện?</h2>
+
+            <p>
+                Nguyên nhân có thể đến từ nhận thức và hành vi của
+                mỗi cá nhân, chẳng hạn như thiếu khả năng kiểm soát
+                cảm xúc, muốn thu hút sự chú ý hoặc chạy theo tâm lý
+                đám đông.
+            </p>
+
+            <p>
+                Bên cạnh đó, sự lan truyền nhanh chóng của mạng xã hội,
+                việc thiếu giáo dục về an toàn số và sự phối hợp chưa
+                chặt chẽ giữa gia đình với nhà trường cũng góp phần
+                khiến vấn đề trở nên phức tạp.
+            </p>
+        </div>
+
+        <div class="content-image">
+            <img src="images/nguyen.jpg"
+                 alt="Minh họa nguyên nhân của bạo lực mạng">
+        </div>
+
+    </div>
+</section>
+
+
+<!-- HẬU QUẢ -->
+
+<section id="hauqua">
+    <div class="section-label">05 / CONSEQUENCES</div>
+
+    <h2 class="section-title">Tổn thương không dừng lại sau một cú nhấp chuột</h2>
+
+    <p class="section-intro">
+        Một bình luận tưởng chừng vô hại có thể để lại những ảnh hưởng
+        lâu dài. Bạo lực mạng không chỉ tác động đến một cá nhân
+        mà còn ảnh hưởng đến môi trường học đường.
+    </p>
+
+    <div class="content-row">
+
+        <div class="content-image">
+            <img src="images/hau.jfif"
+                 alt="Minh họa hậu quả của bạo lực mạng">
+        </div>
+
+        <div class="content-text">
+            <h3>Đối với người bị bắt nạt</h3>
+            <p>
+                Có thể cảm thấy lo lắng, mất tự tin, ngại giao tiếp,
+                gặp khó khăn trong học tập và các mối quan hệ.
+            </p>
+
+            <h3>Đối với người thực hiện hành vi</h3>
+            <p>
+                Có thể phải chịu trách nhiệm về hành vi của mình,
+                đồng thời đánh mất sự tin tưởng và tôn trọng từ
+                những người xung quanh.
+            </p>
+
+            <h3>Đối với cộng đồng</h3>
+            <p>
+                Bạo lực mạng làm suy giảm sự an toàn, đoàn kết
+                và niềm tin trong môi trường học đường.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- VIDEO -->
+
+<section class="video-section">
+    <div class="section-label">06 / WATCH & THINK</div>
+
+    <h2 class="section-title">Một phút để suy nghĩ</h2>
+
+    <p class="section-intro" style="margin-left:auto;margin-right:auto;">
+        Một video ngắn giúp chúng ta nhìn nhận rõ hơn về
+        những tác động của bạo lực trên không gian mạng.
+    </p>
+
+    <div class="video-box">
+        <video controls poster="images/video-poster.jpg">
+            <source src="videos/vid_bao_luc.mp4" type="video/mp4">
+            Trình duyệt của bạn không hỗ trợ phát video.
+        </video>
+    </div>
+
+    <p style="font-size:13px;color:#754B5C;">
+        Video minh họa – có thể thay bằng video phù hợp với chủ đề.
+    </p>
+</section>
+
+
+<!-- GIẢI PHÁP -->
+
+<section class="pink-section" id="giaiphap">
+    <div class="section-label">07 / SOLUTIONS</div>
+
+    <h2 class="section-title">Chúng ta có thể làm gì?</h2>
+
+    <p class="section-intro">
+        Ngăn chặn bạo lực mạng không phải trách nhiệm của riêng
+        một cá nhân. Mỗi người đều có thể góp phần xây dựng
+        một không gian mạng văn minh hơn.
+    </p>
+
+    <div class="solution-grid">
+
+        <div class="solution">
+            <h3>01. Đối với học sinh</h3>
+            <p>
+                Suy nghĩ trước khi bình luận, không chia sẻ nội dung
+                xúc phạm người khác. Khi bị bắt nạt, hãy lưu lại
+                bằng chứng, chặn và báo cáo tài khoản vi phạm,
+                đồng thời tìm sự hỗ trợ từ người lớn đáng tin cậy.
+            </p>
+        </div>
+
+        <div class="solution">
+            <h3>02. Đối với gia đình</h3>
+            <p>
+                Quan tâm đến đời sống tinh thần của con em,
+                lắng nghe và hướng dẫn cách sử dụng mạng xã hội
+                an toàn thay vì chỉ trách phạt.
+            </p>
+        </div>
+
+        <div class="solution">
+            <h3>03. Đối với nhà trường</h3>
+            <p>
+                Tăng cường giáo dục kỹ năng số, xây dựng kênh
+                tiếp nhận phản ánh và có biện pháp hỗ trợ
+                kịp thời cho học sinh.
+            </p>
+        </div>
+
+        <div class="solution">
+            <h3>04. Đối với cộng đồng</h3>
+            <p>
+                Không cổ vũ, chia sẻ hay tiếp tay cho nội dung
+                độc hại. Cùng lan tỏa những hành động tích cực
+                và tôn trọng sự khác biệt.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- BÀI HỌC -->
+
+<section>
+    <div class="content-row">
+
+        <div class="content-text">
+            <div class="section-label">08 / LESSONS</div>
+
+            <h2 class="section-title">Tự do trên mạng đi cùng trách nhiệm</h2>
+
+            <p>
+                Mỗi học sinh cần hiểu rằng quyền tự do ngôn luận
+                không đồng nghĩa với quyền xúc phạm hay làm tổn thương
+                người khác. Góp ý chân thành khác hoàn toàn với
+                công kích và bắt nạt.
+            </p>
+
+            <p>
+                Hãy biết kiểm chứng thông tin, tôn trọng quyền riêng tư,
+                không hùa theo đám đông và sẵn sàng lên tiếng đúng cách
+                khi chứng kiến hành vi bắt nạt.
+            </p>
+        </div>
+
+        <div class="content-image">
+            <img src="images/thong-diep.jpg"
+                 alt="Thông điệp sử dụng mạng xã hội văn minh">
+        </div>
+
+    </div>
+</section>
+
+
+<!-- KẾT -->
+
+<section class="message">
+    <div class="message-box">
+        <div class="section-label">A FINAL MESSAGE</div>
+
+        <h2>Hãy tử tế, ngay cả khi ở sau màn hình.</h2>
+
+        <p>
+            Một lời nói có thể khiến ai đó tổn thương,
+            nhưng một hành động tử tế cũng có thể giúp họ
+            cảm thấy được tôn trọng và bảo vệ.
+        </p>
+
+        <p>
+            <strong>
+                Nghĩ trước khi gửi. Hiểu trước khi phán xét.
+                Đừng biến không gian mạng thành nơi làm đau nhau.
+            </strong>
+        </p>
+    </div>
+</section>
+
+
+<footer>
+    <p>ĐƯỢC THỰC HIỆN VỚI MONG MUỐN XÂY DỰNG MỘT KHÔNG GIAN MẠNG TÍCH CỰC</p>
+    <p>© 2026 | PINK & BLUE PROJECT</p>
+</footer>
+
+</body>
+</html>
